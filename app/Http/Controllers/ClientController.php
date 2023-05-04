@@ -16,6 +16,12 @@ class ClientController
     public function insertClient()
     {
 
+        // Cria a variavel de retorno
+        $return = [
+            "success" => false,
+            "message" => ""
+        ];
+
         // Cria uma nova instância da class Testpages
         $testpages = new Testpages();
 
@@ -30,10 +36,18 @@ class ClientController
 
         // Chama o método insertClient() na instância do modelo
         if ($client->create($dataFormated)) {
-            return true;
+            $return = [
+                "success" => true,
+                "message" => "Inserção de dados realizada com sucesso!"
+            ];
         } else {
-            return false;
+            $return = [
+                "success" => false,
+                "message" => "Ocorreu algum erro ao tentar inserir os dados."
+            ];
         }
+
+        return $return;
     }
 
     /**
