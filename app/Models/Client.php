@@ -7,12 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
-
-    protected $table = 'client';
-    protected $primaryKey = 'id_client';
-
     use HasFactory;
-
 
     /**
      * Insere um novo registro na tabela.
@@ -68,6 +63,4 @@ class Client extends Model
     {
         return self::delete();
     }
-
-    
 }

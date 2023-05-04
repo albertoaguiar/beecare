@@ -143,6 +143,7 @@ class Testpages
                 return false;
             }
 
+            // Não encerra a sessão para que seja possível ver o resultado
             //$this->driver->quit();
         } catch (\Exception $e) {
             return $e;
@@ -207,6 +208,9 @@ class Testpages
                 // Verifica se a página de sucesso foi exibida
                 $successMsg = Condition::presenceOfElementLocated(By::cssSelector('.explanation'));
                 $this->driver->wait()->until($successMsg);
+
+                // Não encerra a sessão para que seja possível ver o resultado
+                //$this->driver->quit();
 
                 if($successMsg) {
                     $return = [

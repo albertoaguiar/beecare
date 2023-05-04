@@ -62,7 +62,7 @@ class ClientController
 
         // Varre o parametro para formata-lo para inserção no banco
         foreach ($data as $key => $value) {
-            $arr = ["ds_name" => $value[0], "nr_amount" => $value[1]];
+            $arr = ["name" => $value[0], "amount" => $value[1]];
             array_push($return, $arr);
         }
 
