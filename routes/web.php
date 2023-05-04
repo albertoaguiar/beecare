@@ -20,3 +20,6 @@ Route::get('/insert-client', 'App\Http\Controllers\ClientController@insertClient
 Route::get('/fill-form', 'App\Http\Controllers\ClientController@fillForm');
 Route::get('/download-file', 'App\Http\Controllers\ClientController@downloadFile');
 Route::get('/upload-file', 'App\Http\Controllers\ClientController@uploadFile');
+
+Route::get('/read-pdf', 'App\Http\Controllers\PdfController@convertPdfToCsv');
+Route::get('/read-pdf2', 'App\Http\Controllers\Pdf2Controller@convertPdfToCsv');

@@ -11,7 +11,9 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "php-webdriver/webdriver": "^1.14"
+        "php-webdriver/webdriver": "^1.14",
+        "smalot/pdfparser": "^2.5",
+        "symfony/process": "^5.4"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
